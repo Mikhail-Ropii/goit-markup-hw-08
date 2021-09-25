@@ -1,0 +1,37 @@
+.clients {
+    display: flex;
+}
+
+.clients__link {
+    @include flex;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    transition: border-color var(--animate-time) var(--animate-function);
+
+    &:hover,
+    &:focus {
+    border-color: var(--accent-color);
+}
+}
+
+.clients__item {
+    &:not(:last-child) {
+    margin-right: 30px;
+}
+}
+
+.clients__icon {
+    fill: var(--icon-color);
+    transition: fill var(--animate-time) var(--animate-function);
+
+    .clients__link:hover &,
+    .clients__link:focus & {
+    fill: var(--accent-color);
+    }
+}
+
+
