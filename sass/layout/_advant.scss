@@ -1,11 +1,36 @@
+.features {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+        margin-bottom: -30px;
+    }
+}
+
+.features__item {
+    width: 100%;
+    
+    &:not(:last-child) {
+        margin-bottom: 30px;
+ }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+}
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100% / 4 - 30px);
+}
+}
+
 .features__icon {
     @include flex;
-
-    width: 270px;
     height: 120px;
+    
     margin-bottom: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
 
     background-color: #F5F4FA;
     border-radius: 4px;
@@ -13,18 +38,6 @@
 
 .advant {
     padding-bottom: 47px;
-}
-
-.features {
-    display: flex;
-}
-
-.features__item {
-    max-width: 270px;
-
-    &:not(:last-child) {
-    margin-right: 30px;
-}
 }
 
 .features__title {
@@ -36,10 +49,14 @@
     color: var(--title-text-color);
 
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+}
 }
 
 .features__text {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03em;   
 }
