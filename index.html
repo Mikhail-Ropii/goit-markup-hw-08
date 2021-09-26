@@ -16,7 +16,7 @@
 
   <body>
     <!--site head-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container site-nav">
         <nav class="main-nav">
           <a class="logo link" href="./index.html">
@@ -52,8 +52,57 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="24" height="16">
+            <use href="./images/sprite.svg#mob-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="menu-close" data-menu-close>
+          <svg width="19" height="19">
+            <use href="./images/sprite.svg#mob-menu-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-nav list">
+          <li class="mob-menu-item">
+            <a href="./index.html" class="mob-menu-nav-link mob-active link">Студия</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="./portfolio.html" class="mob-menu-nav-link link">Портфолио</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="" class="mob-menu-nav-link link">Контакты</a>
+          </li>
+        </ul>
+        <div>
+          <ul class="mob-contacts-nav list">
+            <li class="mob-contacts-item">
+              <a href="tel:+380961111111" class="mob-menu-tel-link link">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-contacts-item">
+              <a href="mailto:info@devstudio.com" class="mob-menu-mail-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-social-nav list">
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">Instagram</a>
+            </li>
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">Twitter</a>
+            </li>
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">Facebook</a>
+            </li>
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- hero -->
       <section class="hero section">
@@ -403,7 +452,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-contacts">
@@ -473,7 +522,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close btn" data-modal-close>
@@ -530,5 +579,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

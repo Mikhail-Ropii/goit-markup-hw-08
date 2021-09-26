@@ -91,6 +91,7 @@
     outline: transparent;
     border: 1px solid var(--accent-color);
 }
+   
 }
 
 .checkbox {
@@ -122,13 +123,18 @@
 }
 
 .checkbox__text {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: var(--main-text-color);
 
     user-select: none;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .policy-link {

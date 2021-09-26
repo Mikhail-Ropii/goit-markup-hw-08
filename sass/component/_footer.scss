@@ -5,7 +5,16 @@
 }
 
 .footer-content {
-    display: flex;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 }
 
 .footer-logo {
@@ -17,6 +26,10 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #ffffff;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .footer-list__item:not(:last-child) {
@@ -25,6 +38,9 @@
 
 .adress,
 .footer-list__link {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
     display: block;
 
     font-size: 14px;
@@ -51,11 +67,27 @@
 }
 
 .footer-contacts {
-    margin-right: 70px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+}
+}
+
+.join-social {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 }
 
 .send__title,
 .join-social__title {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -69,6 +101,7 @@
 
 .join-social__list {
     display: flex;
+    justify-content: center;
 }
 
 .join-social__item:not(:last-child) {
@@ -96,20 +129,30 @@
 }
 
 .send {
+
+    @media screen and (min-width: 1200px) {
     margin-right: 0;
     margin-left: auto;
+    }
+    
 }
 
 .send-wrap {
-    display: flex;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 
 }
 
 .send-form__input {
-    min-width: 358px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    width: 100%;
+    max-width: 450px;
     height: 50px;
     padding-left: 16px;
-    margin-right: 12px;
+    margin-bottom: 20px;
+    
 
     color: #ffffff;
     background-color: #2F303A;
@@ -122,9 +165,20 @@
 
     color: rgba(255, 255, 255, 0.6);
 }
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0px;
+    }
 }
 
 .send-btn {
+    margin-left: auto;
+    margin-right: auto;
+
     min-width: 200px;
     height: 50px;
 
@@ -138,9 +192,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex;
 }
 
 .send-btn__icon {
