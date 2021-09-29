@@ -419,10 +419,6 @@ body {
   }
 }
 
-.mob-menu .container {
-  position: relative;
-}
-
 .menu-close {
   position: absolute;
   right: 15px;
@@ -430,6 +426,7 @@ body {
 }
 
 .mob-menu {
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -466,11 +463,11 @@ body {
   color: var(--title-text-color);
 }
 
-.mob-menu-item:not(:last-child) {
+.mob-menu__item:not(:last-child) {
   margin-bottom: 36px;
 }
 
-.mob-contacts-item:not(:last-child) {
+.mob-contacts-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -495,13 +492,13 @@ body {
   flex-wrap: wrap;
 }
 
-.mob-social-item:not(:last-child) {
+.mob-social-nav__item:not(:last-child) {
   padding-right: 10px;
   margin-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.mob-social-link {
+.mob-social-nav__link {
   display: block;
   font-weight: 500;
   font-size: 18px;
@@ -907,6 +904,7 @@ body {
 }
 
 .checkbox__text {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -1307,19 +1305,24 @@ body {
 @media screen and (min-width: 768px) {
   .filter-list {
     margin-bottom: 30px;
+    justify-content: center;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .filter-list {
-    justify-content: center;
     margin-bottom: 50px;
   }
 }
 
 .filter-list__item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter-list__button {
@@ -1343,6 +1346,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .projects {
+    display: flex;
+    flex-wrap: wrap;
     margin-right: calc(-1 * var(--projects-card-gap));
     margin-bottom: calc(-1 * var(--projects-card-gap));
   }
@@ -1364,10 +1369,16 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .projects__item {
     flex-basis: calc(100% / 3 - var(--projects-card-gap));
   }
+}
+
+.projects__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .projects__title {
@@ -1384,6 +1395,7 @@ body {
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
+  flex-grow: 1;
 }
 
 .projects__text {

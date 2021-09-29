@@ -65,39 +65,39 @@
           </svg>
         </button>
         <ul class="mob-menu-nav list">
-          <li class="mob-menu-item">
-            <a href="./index.html" class="mob-menu-nav-link mob-active link">Студия</a>
+          <li class="mob-menu__item">
+            <a href="./index.html" class="mob-menu-nav-link link">Студия</a>
           </li>
-          <li class="mob-menu-item">
-            <a href="./portfolio.html" class="mob-menu-nav-link link">Портфолио</a>
+          <li class="mob-menu__item">
+            <a href="./portfolio.html" class="mob-menu-nav-link mob-active link">Портфолио</a>
           </li>
-          <li class="mob-menu-item">
+          <li class="mob-menu__item">
             <a href="" class="mob-menu-nav-link link">Контакты</a>
           </li>
         </ul>
         <div>
           <ul class="mob-contacts-nav list">
-            <li class="mob-contacts-item">
+            <li class="mob-contacts-nav__item">
               <a href="tel:+380961111111" class="mob-menu-tel-link link">+38 096 111 11 11</a>
             </li>
-            <li class="mob-contacts-item">
+            <li class="mob-contacts-nav__item">
               <a href="mailto:info@devstudio.com" class="mob-menu-mail-link link"
                 >info@devstudio.com</a
               >
             </li>
           </ul>
           <ul class="mob-social-nav list">
-            <li class="mob-social-item">
-              <a href="" class="mob-social-link link">Instagram</a>
+            <li class="mob-social-nav__item">
+              <a href="" class="mob-social-nav__link link">Instagram</a>
             </li>
-            <li class="mob-social-item">
-              <a href="" class="mob-social-link link">Twitter</a>
+            <li class="mob-social-nav__item">
+              <a href="" class="mob-social-nav__link link">Twitter</a>
             </li>
-            <li class="mob-social-item">
-              <a href="" class="mob-social-link link">Facebook</a>
+            <li class="mob-social-nav__item">
+              <a href="" class="mob-social-nav__link link">Facebook</a>
             </li>
-            <li class="mob-social-item">
-              <a href="" class="mob-social-link link">LinkedIn</a>
+            <li class="mob-social-nav__item">
+              <a href="" class="mob-social-nav__link link">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -207,13 +207,18 @@
             <li class="team__item">
               <picture>
                 <source
-                  srcset="./images/team/team1-mob@x1.jpg 1x, ./images/team/team1-mob@x2.jpg 2x"
-                  media="(min-width:320px)"
-                  srcset="./images/team/team1-tab@x1.jpg 1x, ./images/team/team1-tab@x2.jpg 2x"
-                  media="(min-width:768px)"
                   srcset="./images/team/team1-desc@x1.jpg 1x, ./images/team/team1-desc@x2.jpg 2x"
                   media="(min-width:1200px)"
                 />
+                <source
+                  srcset="./images/team/team1-tab@x1.jpg 1x, ./images/team/team1-tab@x2.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team1-mob@x1.jpg 1x, ./images/team/team1-mob@x2.jpg 2x"
+                  media="(min-width:320px)"
+                />
+
                 <img src="./images/team/team1.jpg" alt="Сотрудник студии" />
               </picture>
               <div class="team__name">
@@ -254,13 +259,18 @@
             <li class="team__item">
               <picture>
                 <source
-                  srcset="./images/team/team2-mob@x1.jpg 1x, ./images/team/team2-mob@x2.jpg 2x"
-                  media="(min-width:320px)"
-                  srcset="./images/team/team2-tab@x1.jpg 1x, ./images/team/team2-tab@x2.jpg 2x"
-                  media="(min-width:768px)"
                   srcset="./images/team/team2-desc@x1.jpg 1x, ./images/team/team2-desc@x2.jpg 2x"
                   media="(min-width:1200px)"
                 />
+                <source
+                  srcset="./images/team/team2-tab@x1.jpg 1x, ./images/team/team2-tab@x2.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team2-mob@x1.jpg 1x, ./images/team/team2-mob@x2.jpg 2x"
+                  media="(min-width:320px)"
+                />
+
                 <img src="./images/team/team2.jpg" alt="Сотрудник студии" />
               </picture>
               <div class="team__name">
@@ -303,13 +313,18 @@
             <li class="team__item">
               <picture>
                 <source
-                  srcset="./images/team/team3-mob@x1.jpg 1x, ./images/team/team3-mob@x2.jpg 2x"
-                  media="(min-width:320px)"
-                  srcset="./images/team/team3-tab@x1.jpg 1x, ./images/team/team3-tab@x2.jpg 2x"
-                  media="(min-width:768px)"
                   srcset="./images/team/team3-desc@x1.jpg 1x, ./images/team/team3-desc@x2.jpg 2x"
                   media="(min-width:1200px)"
                 />
+                <source
+                  srcset="./images/team/team3-tab@x1.jpg 1x, ./images/team/team3-tab@x2.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team3-mob@x1.jpg 1x, ./images/team/team3-mob@x2.jpg 2x"
+                  media="(min-width:320px)"
+                />
+
                 <img src="./images/team/team3.jpg" alt="Сотрудник студии" />
               </picture>
               <div class="team__name">
@@ -352,14 +367,19 @@
             <li class="team__item">
               <picture>
                 <source
-                  srcset="./images/team/team4-mob@x1.jpg 1x, ./images/team/team4-mob@x2.jpg 2x"
-                  media="(min-width:320px)"
-                  srcset="./images/team/team4-tab@x1.jpg 1x, ./images/team/team4-tab@x2.jpg 2x"
-                  media="(min-width:768px)"
                   srcset="./images/team/team4-desc@x1.jpg 1x, ./images/team/team4-desc@x2.jpg 2x"
                   media="(min-width:1200px)"
                 />
-                <img src="./images/team/team4.jpg" alt="Сотрудник студии" />
+                <source
+                  srcset="./images/team/team4-tab@x1.jpg 1x, ./images/team/team4-tab@x2.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team4-mob@x1.jpg 1x, ./images/team/team4-mob@x2.jpg 2x"
+                  media="(min-width:320px)"
+                />
+
+                <img src="./images/team/team1.jpg" alt="Сотрудник студии" />
               </picture>
               <div class="team__name">
                 <h3 class="team__unit">Михаил Ермаков</h3>
@@ -570,9 +590,9 @@
                 <use href="./images/sprite.svg#modal-check"></use>
               </svg>
             </span>
-            <p class="checkbox__text">
+            <b class="checkbox__text">
               Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a>
-            </p>
+            </b>
           </label>
           <button type="submit" class="submit-btn btn">Отправить</button>
         </form>
