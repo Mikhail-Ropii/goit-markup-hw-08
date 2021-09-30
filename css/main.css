@@ -746,13 +746,20 @@ body {
 
 .modal {
   position: relative;
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: scale(1);
   transition: transform var(--animate-time) var(--animate-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal-window {
@@ -781,6 +788,7 @@ body {
 }
 
 .modal__title {
+  padding: 0 40px;
   margin-top: 40px;
   margin-bottom: 12px;
   font-weight: 700;
@@ -1354,8 +1362,11 @@ body {
 }
 
 .projects__item {
-  margin-bottom: var(--projects-card-gap);
   transition: box-shadow var(--animate-time) var(--animate-function);
+}
+
+.projects__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .projects__item:hover {
@@ -1365,6 +1376,7 @@ body {
 @media screen and (min-width: 768px) {
   .projects__item {
     flex-basis: calc(100% / 2 - var(--projects-card-gap));
+    margin-bottom: var(--projects-card-gap);
     margin-right: var(--projects-card-gap);
   }
 }

@@ -1,7 +1,7 @@
 .modal {
     position: relative;
 
-    width: 528px;
+    width: 450px;
     min-height: 581px;
 
     background-color: #ffffff;
@@ -12,6 +12,11 @@
 
     transform: scale(1);
     transition: transform var(--animate-time) var(--animate-function);
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        min-height: 581px;
+    }
 }
 
 .backdrop.is-hidden .modal-window {
@@ -43,6 +48,7 @@
 }
 
 .modal__title {
+    padding: 0 40px;
     margin-top: 40px;
     margin-bottom: 12px;
 

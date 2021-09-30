@@ -8,7 +8,9 @@
 }
 
 .projects__item {
-    margin-bottom: var(--projects-card-gap);
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
     transition: box-shadow var(--animate-time) var(--animate-function);
 
     &:hover {
@@ -18,6 +20,7 @@
 }
     @media screen and (min-width: 768px) {
         flex-basis: calc(100% / 2 - var(--projects-card-gap));
+        margin-bottom: var(--projects-card-gap);
         margin-right: var(--projects-card-gap);
     }
     @media screen and (min-width: 1200px) {
